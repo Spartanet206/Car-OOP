@@ -6,12 +6,12 @@ using namespace std;
 class Car
 {
 private:
-	char engine[10];
-	char model[10];
-	char fuel[10];
-	char year[10];
-	char seats[10];
-	char tire_size[10];
+	string engine;
+	string model;
+	string fuel;
+	string year;
+	string seats;
+	string tire_size;
 public:
 	void Start()
 	{
@@ -22,9 +22,10 @@ public:
 		cout << "Stop Engine ! \n\n";
 	}
 
-	void InputEng(char engine)
+	void InputEng(string cm)
 	{
-		cout << "Engine L =", engine, "\n\n";
+		engine = cm;
+		cout << "Engine L = " << engine << "\n\n";
 	}
 
 };
@@ -33,9 +34,12 @@ public:
 int main()
 {
 	Car a;
-	char cm;
+	cout << "Input engine type: ";
+	string cm;
 	cin >> cm;
+	cout << endl << endl;
 	a.InputEng(cm);
+	cout << endl << endl;
 	a.Start();
 	this_thread::sleep_for(chrono::milliseconds(3000)); // Sleep time on 3 second;
 	a.Stop();
