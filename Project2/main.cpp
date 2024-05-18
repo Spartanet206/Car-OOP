@@ -37,7 +37,7 @@ int main()
 	cin >> cm;
 	a.InputEng(cm);
 	a.Start();
-	this_thread::sleep_for(chrono::milliseconds(3000));
+	this_thread::sleep_for(chrono::milliseconds(3000)); // Sleep time on 3 second;
 	a.Stop();
 
 }
