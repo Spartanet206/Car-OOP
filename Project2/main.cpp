@@ -6,6 +6,7 @@ using namespace std;
 class Car
 {
 private:
+	string description;
 	string engine;
 	string model;
 	string fuel;
