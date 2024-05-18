@@ -17,6 +17,7 @@ public:
 	{
 		cout << "Start Engine ! \n\n";
 	}
+
 	void Stop()
 	{
 		cout << "Stop Engine ! \n\n";
@@ -43,5 +44,17 @@ int main()
 	a.Start();
 	this_thread::sleep_for(chrono::milliseconds(3000)); // Sleep time on 3 second;
 	a.Stop();
+
+	Car b;
+	cout << endl << endl;
+	cout << "Input engine type: ";
+	string cm1;
+	cin >> cm1;
+	cout << endl << endl;
+	b.InputEng(cm1);
+	cout << endl << endl;
+	b.Start();
+	this_thread::sleep_for(chrono::milliseconds(3000)); // Sleep time on 3 second;
+	b.Stop();
 
 }
